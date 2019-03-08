@@ -1,0 +1,17 @@
+# Author: Atharva Gokhale
+# Date: Thursday March 7, 2019
+# Commit message: Bug 1532673 - Corrected field spelling in statement to correctly set safeMode.accessKey field
+
+diff --git a/browser/base/content/browser.js b/browser/base/content/browser.js
+index b6bbdd9..970f5d3 100644
+--- a/browser/base/content/browser.js
++++ b/browser/base/content/browser.js
+@@ -1574,7 +1574,7 @@ var gBrowserInit = {
+     let safeMode = document.getElementById("helpSafeMode");
+     if (Services.appinfo.inSafeMode) {
+       safeMode.label = safeMode.getAttribute("stoplabel");
+-      safeMode.accessKey = safeMode.getAttribute("stopaccesskey");
++      safeMode.accesskey = safeMode.getAttribute("stopaccesskey");
+     }
+ 
+     // BiDi UI
